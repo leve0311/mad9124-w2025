@@ -1,14 +1,17 @@
+// 1.
 const students = require("./students.json");
 
 function say(message) {
   console.log(message);
 }
 
+// 2.
 students.forEach(({ firstName, lastName }) =>
   say(`Hello ${firstName} ${lastName}`)
 );
 console.log(); // spacing
 
+// 3.
 let studentsD = 0;
 
 const studentsLastNameD = students.forEach(({ lastName }) => {
@@ -32,10 +35,12 @@ console.log(); // spacing between
 // });
 // say("]");
 
+// 4.
 const emails = students.map(
   (students) => `${students.firstName.toLowerCase()}@algonquincollege.com`
 );
 
+// 5.
 console.log(emails);
 
 // console.log(
