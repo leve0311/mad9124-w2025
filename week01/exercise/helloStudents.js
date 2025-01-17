@@ -7,7 +7,7 @@ function say(message) {
 students.forEach(({ firstName, lastName }) =>
   say(`Hello ${firstName} ${lastName}`)
 );
-console.log();
+console.log(); // spacing
 
 let studentsD = 0;
 
@@ -19,8 +19,13 @@ const studentsLastNameD = students.forEach(({ lastName }) => {
   }
 });
 say(`Count of the last names starting with D is ${studentsD}`);
-console.log();
 
+// Added from class ////////////
+// const count = students.reduce(
+//   (total, cv) => total + (cv.lastName[0].toUpperCase() === "D" ? 1 : 0),
+//   0
+// );
+console.log(); // spacing between
 // const studentEmails = say("[");
 // students.forEach(({ firstName }) => {
 //   say(` ${firstName}@algonquincollege.com`);
@@ -28,16 +33,18 @@ console.log();
 // say("]");
 
 const emails = students.map(
-  (student) => `${student.firstName.toLowerCase()}@algonquincollege.com`
+  (students) => `${students.firstName.toLowerCase()}@algonquincollege.com`
 );
 
-console.log(
-  "[\n" +
-    emails
-      .map(
-        (email, index) =>
-          `     '${email}'${index < emails.length - 1 ? "," : ""}`
-      )
-      .join("\n") +
-    "\n]"
-);
+console.log(emails);
+
+// console.log(
+// "[\n" +
+//   emails
+//     .map(
+//       (email, index) =>
+//         `     '${email}'${index < emails.length - 1 ? "," : ""}`
+//     )
+//     .join("\n") +
+//   "\n]"
+// );
