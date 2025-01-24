@@ -1,42 +1,41 @@
 "use strict";
-
+const cars = require("./cars");
 const express = require("express");
-const students = require("./students.json");
 
 const app = express();
 
-// create a new student
-app.post("/api/students", (req, res) => {
-  //find new student data
-  const newStudent = req.body;
-
-  console.log("new student", newStudent);
+// create a new car
+app.post("/api/cars", (req, res) => {
+  //find new car data
+  const newCar = req.body;
+  response.send({ data: cars });
+  console.log("new car", newCar);
 
   // save new student to our array
 
-  // respond with new student (including its id)
+  // respond with new car (including its id)
 });
 
 // READ
-//Return a collection of students
-app.get("/api/students/", (req, res) => {
+//Return a collection of cars
+app.get("/api/cars/", (req, res) => {
   res.status(200).json({
-    data: students,
+    data: cars,
   });
 });
 
 // return the student matching the id value
-app.get("/api/students/:id", (req, res) => {
-  const studentId = req.params.id;
-  const student = students.find((s) => s.id === parseInt(studentId, 10));
+app.get("/api/cars/:id", (req, res) => {
+  const carId = req.params.id;
+  const car = cars.find((s) => s.id === parseInt(carId, 10));
 
-  if (!student) {
+  if (!car) {
     res.status(404).json({
-      error: `student with id ${studentId} not found`,
+      error: `car with id ${carId} not found`,
     });
     return;
   }
-  res.json({ data: student });
+  res.json({ data: car });
 });
 
 // app.patch("/api/cars/:id", (req, res) => {}); // update some properties of a car
