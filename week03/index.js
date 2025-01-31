@@ -5,6 +5,8 @@ const students = require("./students.json");
 
 const app = express();
 
+app.use(express.json());
+
 // create a new student
 app.post("/api/students", (req, res) => {
   //find new student data
