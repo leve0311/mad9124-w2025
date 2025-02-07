@@ -1,6 +1,6 @@
 "use strict";
-const cars = require("./cars");
 const express = require("express");
+const cars = require("./cars.js");
 
 const app = express();
 
