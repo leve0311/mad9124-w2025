@@ -1,0 +1,21 @@
+{
+  "name": "midterm-project",
+  "version": "1.0.0",
+  "description": "crud api with api integration",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "author": "Zayn Levesque <leve0311@algonquinlive.com>",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "redis": "^4.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
