@@ -1,0 +1,25 @@
+{
+  "name": "week11",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Zayn Levesque",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "compression": "^1.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "mongoose": "^8.12.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.9",
+    "winston": "^3.17.0",
+    "xss": "^1.0.15"
+  }
+}
