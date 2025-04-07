@@ -2,7 +2,7 @@
   "name": "exercise",
   "version": "1.0.0",
   "main": "src/index.js",
-  "author": "Tim Robillard",
+  "author": "Zayn Levesque <leve0311@algonquinlive.com>",
   "license": "MIT",
   "private": false,
   "dependencies": {
